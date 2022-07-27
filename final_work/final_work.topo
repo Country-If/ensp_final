@@ -63,7 +63,7 @@
                 <interface sztype="Ethernet" interfacename="GE" count="2" />
             </slot>
         </dev>
-        <dev id="94510E76-AC58-46f0-9301-0DEA298666CA" name="Server2" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-A0-50-26 -ipaddr 0.0.0.0 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-29-54-07" com_port="0" bootmode="0" cx="1416.000000" cy="352.000000" edit_left="1443" edit_top="406">
+        <dev id="94510E76-AC58-46f0-9301-0DEA298666CA" name="Server2" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-A0-50-26 -ipaddr 0.0.0.0 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-2B-5A-E2" com_port="0" bootmode="0" cx="1416.000000" cy="352.000000" edit_left="1443" edit_top="406">
             <slot number="slot17" isMainBoard="1">
                 <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
             </slot>
@@ -74,12 +74,12 @@
                 <interface sztype="Ethernet" interfacename="GE" count="2" />
             </slot>
         </dev>
-        <dev id="CD0685C5-812E-4062-9594-04A80486CD6D" name="Server3" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-FE-72-D7 -ipaddr 0.0.0.0 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-3D-59-4F" com_port="0" bootmode="0" cx="1416.000000" cy="438.000000" edit_left="1443" edit_top="492">
+        <dev id="CD0685C5-812E-4062-9594-04A80486CD6D" name="Server3" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-FE-72-D7 -ipaddr 0.0.0.0 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-0D-75-AA" com_port="0" bootmode="0" cx="1416.000000" cy="438.000000" edit_left="1443" edit_top="492">
             <slot number="slot17" isMainBoard="1">
                 <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
             </slot>
         </dev>
-        <dev id="97E95B3E-282E-4ec6-A98F-903FE5DFEC6A" name="Server1" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-A7-4F-73 -ipaddr 0.0.0.0 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-C7-5C-72" com_port="0" bootmode="0" cx="1416.000000" cy="249.000000" edit_left="1443" edit_top="303">
+        <dev id="97E95B3E-282E-4ec6-A98F-903FE5DFEC6A" name="Server1" poe="0" model="Server" settings="-domain 0 -eth 54-89-98-A7-4F-73 -ipaddr 0.0.0.0 -ipmask 255.255.255.0 -gateway 0.0.0.0 -ipv6addr 2000::2 -ipv6gateway 2000::1 -prefixlen 64 -ipv4dns 0.0.0.0 -ipv6dns 3000::1 -dnslist NULL" system_mac="54-89-98-31-62-90" com_port="0" bootmode="0" cx="1416.000000" cy="249.000000" edit_left="1443" edit_top="303">
             <slot number="slot17" isMainBoard="1">
                 <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
             </slot>
@@ -98,19 +98,7 @@
                 <interfaceMap sztype="Ethernet" interfacename="Ethernet" displayNo="2" remoteDisplayNo="1" adapterUid="\Device\NPF_{E3D722E9-9FE0-46EB-BF30-B077891C25E2}" isOpen="1" udpPort="0" peerIPAdd="0.0.0.0" peerIP="0" peerPort="0" />
             </slot>
         </dev>
-        <dev id="5E62641A-6B1F-483b-B30B-4D8C5A21829A" name="FW5" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-22-42-0E" com_port="2013" bootmode="0" cx="1114.000000" cy="352.000000" edit_left="1141" edit_top="406">
-            <slot id="1">
-                <interface category="Ethernet" type="GE" slotIndex="0" cardIndex="0" interfaceIndex="0" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="0" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="1" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="2" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="3" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="4" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="5" />
-                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="6" />
-            </slot>
-        </dev>
-        <dev id="321FA76F-82EA-404a-847A-636FA47153AB" name="FW4" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-CE-1E-15" com_port="2012" bootmode="0" cx="831.000000" cy="249.000000" edit_left="858" edit_top="303">
+        <dev id="4B786375-8BD2-429f-BD85-97294CDA541B" name="FW1" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-8E-0E-5D" com_port="2014" bootmode="0" cx="257.000000" cy="352.000000" edit_left="284" edit_top="406">
             <slot id="1">
                 <interface category="Ethernet" type="GE" slotIndex="0" cardIndex="0" interfaceIndex="0" />
                 <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="0" />
@@ -134,7 +122,7 @@
                 <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="6" />
             </slot>
         </dev>
-        <dev id="4B786375-8BD2-429f-BD85-97294CDA541B" name="FW1" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-8E-0E-5D" com_port="2014" bootmode="0" cx="257.000000" cy="352.000000" edit_left="284" edit_top="406">
+        <dev id="A9D5D460-8B7C-498b-8FFB-3D20A6120CB3" name="FW3" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-E8-70-C8" com_port="2001" bootmode="0" cx="461.000000" cy="438.000000" edit_left="488" edit_top="492">
             <slot id="1">
                 <interface category="Ethernet" type="GE" slotIndex="0" cardIndex="0" interfaceIndex="0" />
                 <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="0" />
@@ -146,7 +134,19 @@
                 <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="6" />
             </slot>
         </dev>
-        <dev id="A9D5D460-8B7C-498b-8FFB-3D20A6120CB3" name="FW3" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-E8-70-C8" com_port="2001" bootmode="0" cx="461.000000" cy="438.000000" edit_left="488" edit_top="492">
+        <dev id="321FA76F-82EA-404a-847A-636FA47153AB" name="FW4" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-CE-1E-15" com_port="2012" bootmode="0" cx="831.000000" cy="249.000000" edit_left="858" edit_top="303">
+            <slot id="1">
+                <interface category="Ethernet" type="GE" slotIndex="0" cardIndex="0" interfaceIndex="0" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="0" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="1" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="2" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="3" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="4" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="5" />
+                <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="6" />
+            </slot>
+        </dev>
+        <dev id="5E62641A-6B1F-483b-B30B-4D8C5A21829A" name="FW5" poe="0" model="USG6000V" settings="" system_mac="00-E0-FC-22-42-0E" com_port="2013" bootmode="0" cx="1114.000000" cy="352.000000" edit_left="1141" edit_top="406">
             <slot id="1">
                 <interface category="Ethernet" type="GE" slotIndex="0" cardIndex="0" interfaceIndex="0" />
                 <interface category="Ethernet" type="GE" slotIndex="1" cardIndex="0" interfaceIndex="0" />
