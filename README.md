@@ -20,19 +20,39 @@
 
 ## 网络设计
 
-1. 地址划分
+### 地址划分
 
-   - PC1 处在vlan 10，网段：192.168.10.0/24
+- PC1 处在vlan 10，网段：192.168.10.0/24
 
-   - PC2 处在vlan 10，网段：192.168.20.0/24
+- PC2 处在vlan 10，网段：192.168.20.0/24
 
-   - PC3 网段：192.168.30.0/24
+- PC3 网段：192.168.30.0/24
 
-   - PC4、PC5 网段：192.168.40.0/24
+- PC4、PC5 网段：192.168.40.0/24
 
-   - Server1、Server2、Server3 网段：192.168.100.0/24
+- Server1、Server2、Server3 网段：192.168.100.0/24
 
-2. 防火墙FW1上配置单臂路由让vlan 10和vlan 20内部可以通信
+### 配置单臂路由让vlan 10和vlan 20内部可以通信
+
+### 安全区域划分
+
+- FW1
+
+  trust区域：`g1/0/0`，`g1/0/0.10`，`g1/0/0.20`
+
+  untrust区域：`g1/0/1`，`g1/0/2`
+
+- FW2
+
+  trust区域：`g1/0/2`
+
+  untrust区域：`g1/0/3`
+
+- FW3
+
+  trust区域：`g1/0/0`
+
+  untrust区域：`g1/0/3`
 
 ## 步骤
 
@@ -56,7 +76,7 @@
 
 - PC5
 
-  ![image-20220727103046928](README.assets/image-20220727103046928.png)
+  ![image-20220727150149499](README.assets/image-20220727150149499.png)
 
 - Server1
 
@@ -106,6 +126,70 @@
 
    ![image-20220727112811666](README.assets/image-20220727112811666.png)
 
+### 配置IPSec VPN
+
+1. 基础配置、接口地址以及安全区域
+
+   - FW2
+
+     ![image-20220727122940169](README.assets/image-20220727122940169.png)
+
+   - FW4
+
+     ![image-20220727123103036](README.assets/image-20220727123103036.png)
+
+2. 配置到对端的路由
+
+   - FW2
+
+     ![image-20220727133421795](README.assets/image-20220727133421795.png)
+
+   - FW4
+
+     ![image-20220727133543896](README.assets/image-20220727133543896.png)
+
+3. 配置相关的安全策略，允许网络A与网络B互访，允许IKE协商报文及加密报文通过
+
+   - FW2
+
+     ![image-20220727151056104](README.assets/image-20220727151056104.png)
+
+   - FW4
+
+     ![image-20220727151417015](README.assets/image-20220727151417015.png)
+
+4. 配置IPSec策略
+
+   - FW2
+
+     ![image-20220727152200849](README.assets/image-20220727152200849.png)
+
+   - FW4
+
+     ![image-20220727152300693](README.assets/image-20220727152300693.png)
+
+5. 防火墙配置安全策略
+
+   - FW2
+
+     ![image-20220727153605072](README.assets/image-20220727153605072.png)
+
+   - FW4
+
+     ![image-20220727153626568](README.assets/image-20220727153626568.png)
+
+### 在配置IPSec VPN的基础上添加优先规则拒绝PC5出站
+
+1. 添加拒绝PC5出站的安全策略，并将其移到顶部
+
+   ![image-20220727155427690](README.assets/image-20220727155427690.png)
+
+2. 查看安全策略，可以看到上面定义的规则确实已在顶部
+
+   ![image-20220727155531892](README.assets/image-20220727155531892.png)
+
+
+
 ## 结果
 
 ### 各设备的配置情况
@@ -127,6 +211,24 @@
 - PC2 ping PC1
 
   ![image-20220727112038779](README.assets/image-20220727112038779.png)
+
+### IPSec配置后的主机通信
+
+- PC3 ping PC4、PC5
+
+  ![image-20220727153923601](README.assets/image-20220727153923601.png)
+
+- PC4 ping PC3
+
+  ![image-20220727154154779](README.assets/image-20220727154154779.png)
+
+### 拒绝PC5出站
+
+- PC5 ping 本地环境下的PC4以及外部网络中的PC3
+
+  ![image-20220727155733990](README.assets/image-20220727155733990.png)
+
+
 
 ## 总结
 
