@@ -16,7 +16,7 @@
 
 ## 拓扑图
 
-![image-20220727113249378](README.assets/image-20220727113249378.png)
+![image-20220727210854401](README.assets/image-20220727210854401.png)
 
 ## 网络设计
 
@@ -48,11 +48,17 @@
 
   untrust区域：`g1/0/3`
 
-- FW3
+- FW4
 
   trust区域：`g1/0/0`
 
   untrust区域：`g1/0/3`
+
+- FW5
+
+  trust区域：`g1/0/1`
+
+  untrust区域：`g0/0/1`
 
 ## 步骤
 
@@ -84,7 +90,7 @@
 
 - Server2
 
-  ![image-20220727103228440](README.assets/image-20220727103228440.png)
+  ![image-20220727172627332](README.assets/image-20220727172627332.png)
 
 - Server3
 
@@ -187,6 +193,30 @@
 2. 查看安全策略，可以看到上面定义的规则确实已在顶部
 
    ![image-20220727155531892](README.assets/image-20220727155531892.png)
+
+### 防火墙使用NAT技术
+
+1. Server组使用公网地址(12.34.56.0/24)代表内部服务器对外地址
+
+   1. 划分安全区域以及接口地址配置
+
+      ![image-20220727205452481](README.assets/image-20220727205452481.png)
+
+      ![image-20220727205823824](README.assets/image-20220727205823824.png)
+
+   2. 添加安全策略
+
+      ![image-20220727173732287](README.assets/image-20220727173732287.png)
+
+   3. 添加nat策略
+
+      ![image-20220727205714303](README.assets/image-20220727205714303.png)
+
+2. 防火墙FW1配置easy-ip让内部pc可以访问外网
+
+   - FW1配置
+
+     ![image-20220727210237854](README.assets/image-20220727210237854.png)
 
 
 
