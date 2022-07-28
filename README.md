@@ -4,9 +4,11 @@
 
 ## 写在前面
 
-1. markdown统一格式，图片放在README.assets下#
+1. markdown统一格式，图片放在README.assets下
 
    ![image-20220726170040090](README.assets/image-20220726170040090.png)
+
+2. 由于配置的保存不一定ok(被坑很多次了)，因此把主要设备的配置文件备份后放在`config_backup`文件夹下以防不测
 
 2. 拓扑图有更新时记得把图片更新了，文件名什么的随便搞就行，typora能看就行
 
@@ -16,7 +18,7 @@
 
 ## 拓扑图
 
-![image-20220728221215266](README.assets/image-20220728221215266.png)
+![image-20220729002039616](README.assets/image-20220729002039616.png)
 
 ## 网络设计
 
@@ -254,7 +256,25 @@
   
   ![image-20220728193817638](README.assets/image-20220728193817638.png)
 
+### 服务器组在NAT基础上添加双机热备
 
+1. 基础配置(ip和安全区域dmz)
+
+   bala
+
+2. vrrp和心跳接口
+
+   虚拟的是设备的网关；
+
+3. 允许备份防火墙进行配置
+
+   bala
+
+4. 调通PC10 ping 服务器
+
+   防火墙安全区域划分和安全策略(备份防火墙)
+
+   与FW5配置相同的NAT策略
 
 ## 结果
 
@@ -302,11 +322,22 @@
 
   ![image-20220728221732946](README.assets/image-20220728221732946.png)
 
+### 双机热备
+
+- PC10 ping Server
+
+  图
+
+- 关闭主防火墙接口
+
+  图
+
 ## 答辩演示
 
 - PC1和PC2可以互相ping通
 - PC4可以ping通PC3，PC5不可以ping通PC3
-- PC1可以ping
+- PC1可以ping通PC6
+- PC10可以ping通服务器组，查看session表可以看到NAT的转换
 
 ## 总结
 
