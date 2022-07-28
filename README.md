@@ -4,7 +4,7 @@
 
 ## 写在前面
 
-1. markdown统一格式，图片放在README.assets下
+1. markdown统一格式，图片放在README.assets下#
 
    ![image-20220726170040090](README.assets/image-20220726170040090.png)
 
@@ -12,11 +12,11 @@
 
 3. 步骤中，每个大的步骤用**三级标题**，具体实现的小步骤加**数字标号**，同级操作(同类设备)用**普通标号**；每一步配置截图中需要框画出重要的操作(如命令、具体操作步骤等)
 
-4. 各设备的保存：在全局模式下(输入`sy`进入用户模式，`ctrl + z`可以退出用户模式进入全局模式)，键入命令`save all`后回车，键入`y`保存配置，Git提交时连同设备的配置都要提交
+4. 各设备的保存：在全局模式下(输入`sy`进入全局模式，`ctrl + z`可以退出全局模式进入用户模式)，键入命令`save all`后回车，键入`y`保存配置，Git提交时连同设备的配置都要提交
 
 ## 拓扑图
 
-![image-20220727210854401](README.assets/image-20220727210854401.png)
+![image-20220728221215266](README.assets/image-20220728221215266.png)
 
 ## 网络设计
 
@@ -40,11 +40,11 @@
 
   trust区域：`g1/0/0`，`g1/0/0.10`，`g1/0/0.20`
 
-  untrust区域：`g1/0/1`，`g1/0/2`
+  untrust区域：`g1/0/1`，`g1/0/2`，`g1/0/3`
 
 - FW2
 
-  trust区域：`g1/0/2`
+  trust区域：`g1/0/2`，`g1/0/0`
 
   untrust区域：`g1/0/3`
 
@@ -58,7 +58,7 @@
 
   trust区域：`g1/0/1`
 
-  untrust区域：`g0/0/1`
+  untrust区域：`g1/0/2`
 
 ## 步骤
 
@@ -83,6 +83,10 @@
 - PC5
 
   ![image-20220727150149499](README.assets/image-20220727150149499.png)
+
+- PC6
+
+  ![image-20220728221449466](README.assets/image-20220728221449466.png)
 
 - Server1
 
@@ -228,6 +232,28 @@
 
      ![image-20220727210237854](README.assets/image-20220727210237854.png)
 
+### 配置OSPF
+
+- AR1
+
+  ![image-20220728194513266](README.assets/image-20220728194513266.png)
+
+- AR2
+
+  ![image-20220728194550285](README.assets/image-20220728194550285.png)
+
+- AR3
+
+  ![image-20220728194641998](README.assets/image-20220728194641998.png)
+
+  补充：修改`g0/0/2`端口ip地址为110.1.1.254/24
+
+- FW1
+
+  ![image-20220728193356285](README.assets/image-20220728193356285.png)
+  
+  ![image-20220728193817638](README.assets/image-20220728193817638.png)
+
 
 
 ## 结果
@@ -268,7 +294,19 @@
 
   ![image-20220727155733990](README.assets/image-20220727155733990.png)
 
+### OSPF
 
+- PC1和PC2 ping PC6
+
+  ![image-20220728221707926](README.assets/image-20220728221707926.png)
+
+  ![image-20220728221732946](README.assets/image-20220728221732946.png)
+
+## 答辩演示
+
+- PC1和PC2可以互相ping通
+- PC4可以ping通PC3，PC5不可以ping通PC3
+- PC1可以ping
 
 ## 总结
 
