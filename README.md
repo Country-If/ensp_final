@@ -32,9 +32,11 @@
 
 - PC4、PC5 网段：192.168.40.0/24
 
-- Server1、Server2、Server3 网段：192.168.100.0/24
+- PC6 网段：110.1.1.0/24
 
-### 配置单臂路由让vlan 10和vlan 20内部可以通信
+- PC10 网段：120.1.1.0/24
+
+- Server1、Server2、Server3 网段：192.168.100.0/24
 
 ### 安全区域划分
 
@@ -46,7 +48,7 @@
 
 - FW2
 
-  trust区域：`g1/0/2`，`g1/0/0`
+  trust区域：`g1/0/2`
 
   untrust区域：`g1/0/3`
 
@@ -60,7 +62,21 @@
 
   trust区域：`g1/0/1`
 
-  untrust区域：`g1/0/2`
+  untrust区域：`g1/0/2`，`g1/0/0`
+  
+- FW7
+
+  trust区域：`g1/0/1`
+
+  untrust区域：`g1/0/0`
+
+### 配置单臂路由让vlan 10和vlan 20内部可以通信
+
+### 配置NAT策略：easy-ip、公网地址转换
+
+### 配置IPSec VPN
+
+### 配置双机热备
 
 ## 步骤
 
@@ -89,6 +105,10 @@
 - PC6
 
   ![image-20220728221449466](README.assets/image-20220728221449466.png)
+
+- PC10
+
+  ![image-20220729084516871](README.assets/image-20220729084516871.png)
 
 - Server1
 
@@ -310,16 +330,6 @@
 
 ## 结果
 
-### 各设备的配置情况
-
-- LSW3
-
-  ![image-20220727113058657](README.assets/image-20220727113058657.png)
-
-- FW1
-
-  
-
 ### 不同vlan内主机可以互相ping通
 
 - PC1 ping PC2
@@ -329,6 +339,14 @@
 - PC2 ping PC1
 
   ![image-20220727112038779](README.assets/image-20220727112038779.png)
+
+### OSPF
+
+- PC1和PC2 ping PC6
+
+  ![image-20220728221707926](README.assets/image-20220728221707926.png)
+
+  ![image-20220728221732946](README.assets/image-20220728221732946.png)
 
 ### IPSec配置后的主机通信
 
@@ -353,14 +371,6 @@
 - 外部的PC3 ping 本地的PC4和PC5
 
   ![image-20220729080730251](README.assets/image-20220729080730251.png)
-
-### OSPF
-
-- PC1和PC2 ping PC6
-
-  ![image-20220728221707926](README.assets/image-20220728221707926.png)
-
-  ![image-20220728221732946](README.assets/image-20220728221732946.png)
 
 ### 双机热备
 
@@ -392,5 +402,5 @@
 
 ## GitHub
 
-[仓库地址(暂时为私密仓库，周五后会开源)](https://github.com/Country-If/ensp_final.git)
+[仓库地址(暂时为](https://github.com/Country-If/ensp_final.git)
 
