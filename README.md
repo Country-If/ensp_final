@@ -136,12 +136,6 @@
 
   补充：g0/0/0端口ip地址改为192.168.0.2/24
 
-- FW3
-
-  ![image-20220726172421683](README.assets/image-20220726172421683.png)
-
-  补充：g0/0/0端口ip地址改为192.168.0.3/24
-
 - FW4
 
   ![image-20220726172536797](README.assets/image-20220726172536797.png)
@@ -153,6 +147,10 @@
   ![image-20220726172640822](README.assets/image-20220726172640822.png)
   
   补充：g0/0/0端口ip地址改为192.168.0.5/24
+  
+- FW7
+
+  ![image-20220729090947089](README.assets/image-20220729090947089.png)
 
 ### 配置单臂路由
 
@@ -220,7 +218,7 @@
 
      ![image-20220727153626568](README.assets/image-20220727153626568.png)
 
-### 在配置IPSec VPN的基础上添加优先规则拒绝PC5与 外部通信
+### 在配置IPSec VPN的基础上添加优先规则拒绝PC5与外部通信
 
 1. 添加拒绝PC5出站的安全策略，并将其移到顶部
 
@@ -402,5 +400,5 @@
 
 ## GitHub
 
-[仓库地址(暂时为](https://github.com/Country-If/ensp_final.git)
+[仓库地址](https://github.com/Country-If/ensp_final.git)
 
